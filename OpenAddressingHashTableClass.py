@@ -24,7 +24,12 @@ class OpenAddressingHashTable(HashTable):
 
     def __str__(self):
         for an_item in self.table:
-            print(an_item.key, an_item.value)
+            if an_item is OpenAddressingBucket.EMPTY_SINCE_START:
+                print("EMPTY_SINCE_START")
+            elif an_item is OpenAddressingBucket.EMPTY_AFTER_REMOVAL:
+                print("EMPTY_AFTER_REMOVAL")
+            else:
+                print(an_item.key + ", " + an_item.value)
         return ""
 
     def probe(self, key, i):

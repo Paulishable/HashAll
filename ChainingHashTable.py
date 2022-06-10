@@ -7,14 +7,22 @@ class ChainingHashTableItem:
         self.value = itemValue
         self.next = None
 
+    def __str__(self):
+        if self.next is not None:
+            return self.key + ", " + self.value + " --> " + self.next.key + ",  " + self.next.value
+        return self.key + ", " + self.value
+
 
 class ChainingHashTable(HashTable):
     def __init__(self, initialCapacity=11):
         self.table = [None] * initialCapacity
 
     def __str__(self):
-        for an_item in self.table:
-            print("table length", len(self.table))
+        for i in range(len(self.table)):
+            if self.table[i] is not None:
+                print(self.table[i])
+            else:
+                print("(empty)")
         return ""
 
     # Inserts the specified key/value pair. If the key already exists, the
