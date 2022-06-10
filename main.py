@@ -40,6 +40,8 @@ tableNames = [
 for j in range(len(tables)):
     print("%s: initial table:" % tableNames[j])
     print(tables[j])
+    # print(tables[j])
+   # print(tables[j].search("Los Angeles"))
 
 # Remove the 3 oldest keys from each hash table
 for i in range(3):
@@ -50,4 +52,6 @@ for i in range(3):
 print("")
 for j in range(len(tables)):
     print("%s after removal:" % tableNames[j])
+    #tables[j].__str__()
+
     print(tables[j])

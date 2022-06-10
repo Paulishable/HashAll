@@ -1,5 +1,6 @@
 from HashTableBaseClass import HashTable
 
+
 class ChainingHashTableItem:
     def __init__(self, itemKey, itemValue):
         self.key = itemKey
@@ -10,6 +11,11 @@ class ChainingHashTableItem:
 class ChainingHashTable(HashTable):
     def __init__(self, initialCapacity=11):
         self.table = [None] * initialCapacity
+
+    def __str__(self):
+        for an_item in self.table:
+            print("table length", len(self.table))
+        return ""
 
     # Inserts the specified key/value pair. If the key already exists, the
     # corresponding value is updated. If inserted or updated, True is returned.
