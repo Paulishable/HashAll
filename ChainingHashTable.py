@@ -1,3 +1,5 @@
+from HashTableBaseClass import HashTable
+
 class ChainingHashTableItem:
     def __init__(self, itemKey, itemValue):
         self.key = itemKey

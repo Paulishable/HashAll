@@ -1,3 +1,6 @@
+from OpenAddressingHashTableClass import OpenAddressingHashTable
+
+
 class QuadraticProbingHashTable(OpenAddressingHashTable):
     def __init__(self, c1=1, c2=1, initial_capacity=11):
         OpenAddressingHashTable.__init__(self, initial_capacity)

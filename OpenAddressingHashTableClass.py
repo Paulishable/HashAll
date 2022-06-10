@@ -1,3 +1,6 @@
+from HashTableBaseClass import HashTable
+from OpenAddressingBucketClass import OpenAddressingBucket
+
 class OpenAddressingHashTable(HashTable):
     def __init__(self, initialCapacity):
         self.table = [OpenAddressingBucket.EMPTY_SINCE_START] * initialCapacity

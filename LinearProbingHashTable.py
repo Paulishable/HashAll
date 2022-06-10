@@ -1,3 +1,6 @@
+from OpenAddressingHashTableClass import OpenAddressingHashTable
+
+
 class LinearProbingHashTable(OpenAddressingHashTable):
     def __init__(self, initial_capacity=11):
         OpenAddressingHashTable.__init__(self, initial_capacity)
